@@ -20,5 +20,13 @@ $rez->setAmount(199.95);
 $rez->setPaymentReason("Auftragsnummer 126342, hier ist der auf Ihrer Rechnung geforderte Betrag, wenn der Text noch viel viel länger wird, wird es erst richtig interessant");
 $rez->generate();
 ```
+
+### Ausgabe
+Der generierte Einzahlungsschein sieht wie folgt aus:
+
+<p align=center>
+    <img alt="Ein mit rezgen generierter roter Einzahlungsschein" src="https://i.imgur.com/fZIktRn.png">
+</p>
+
 ### Hinweis
 Die Klasse wird versuchen den Verwendungszweck (gesetzt in `setPaymentMethod`) wird versucht so gut wie möglich umgebrochen zu werden, aber zu lange Texte werden trotzdem zu Überlappugnen führen. 
