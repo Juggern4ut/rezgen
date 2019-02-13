@@ -94,11 +94,11 @@
 		}
 
 		/**
-		* Generiert den Einzahlungsschein mit den definierten Daten und gibt diesen aus
-		* @return void
+		* Generiert den Einzahlungsschein mit den definierten Daten und speichert diesen im angegebenen Pfad
+		* @param String $path Der Pfad in welchem der Einzahlungsschein abgespeichert werden soll (inklusive Dateiname) bsp: '/media/ez/mein_ezs.png'
+		* @return Boolean Gibt bei Erfolg TRUE zurück. Im Fehlerfall wird FALSE zurückgegeben.
 		*/
-		public function generate(){
-			header("Content-Type: image/png");
+		public function generate($path="/"){
 			$image = imagecreatefrompng($this->_imagePath);
 			$textColor = imagecolorallocate($image, 0, 0, 0);
 			$fontPath = $this->_fontPath;
@@ -154,8 +154,7 @@
 				$lineY+=$lineHeightSmall;
 			}
 
-			imagepng($image);
-			imagedestroy($image);
+			return imagepng($image, $path);
 		}
 	}
 ?>
