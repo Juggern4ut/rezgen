@@ -1,5 +1,5 @@
 # rezgen
-Generiert einen roten Einzalungsschein nach der Vorlage der Schweiz
+Generiert einen roten Einzalungsschein nach Vorlage der Schweiz
 
 ## Installation
 Da die Klasse sehr simpel ist, geht auch die Installation schnell von statten.
@@ -25,7 +25,7 @@ $rez->generate();
 Der generierte Einzahlungsschein sieht wie folgt aus:
 
 <p align=center>
-    <img alt="Ein mit rezgen generierter roter Einzahlungsschein" src="https://i.imgur.com/fZIktRn.png">
+    <img style="border: 1px solid #000;" alt="Ein mit rezgen generierter roter Einzahlungsschein" src="https://i.imgur.com/fZIktRn.png">
 </p>
 
 ### Hinweis
