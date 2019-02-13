@@ -1,5 +1,5 @@
 # rezgen
-Generiert einen roten Einzalungsschein nach Vorlage der Schweiz
+Generiert einen roten Einzahlungsschein nach Vorlage der Schweiz
 
 ## Installation
 Da die Klasse sehr simpel ist, geht auch die Installation schnell von statten.
@@ -28,5 +28,6 @@ Der generierte Einzahlungsschein sieht wie folgt aus:
     <img style="border: 1px solid #000;" alt="Ein mit rezgen generierter roter Einzahlungsschein" src="https://i.imgur.com/fZIktRn.png">
 </p>
 
-### Hinweis
-Die Klasse wird versuchen den Verwendungszweck (gesetzt in `setPaymentMethod`) wird versucht so gut wie möglich umgebrochen zu werden, aber zu lange Texte werden trotzdem zu Überlappugnen führen. 
+### Hinweise
+1. Die Klasse wird versuchen den Verwendungszweck (gesetzt in `setPaymentMethod`) so gut wie möglich umzubrechen, aber zu lange Texte werden trotzdem zu Überlappugnen führen. 
+2. Beachten Sie bitte, dass die Klasse den Einzahlungsschein als Bild generiert und nicht als PDF, das bedeutet, dass der Text auf dem Einzahlungsschein **NICHT** markiert werden kann.
