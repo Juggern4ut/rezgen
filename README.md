@@ -1,13 +1,13 @@
-## rezgen
+# rezgen
 Generiert einen roten Einzalungsschein nach der Vorlage der Schweiz
 
-# Installation
+## Installation
 Da die Klasse sehr simpel ist, geht auch die Installation schnell von statten.
 1. Kopieren Sie den ganzen Inhalt des Ordners "rezgen" in Ihr Projekt.
 2. Inkludieren Sie das File rezgen.php in Ihrem Projekt, wo Sie den Einzahlungsschein erstellen möchten.
 3. (optional) Falls Sie den 'res'-Ordner an einen andern Ort in Ihrem Projekt verlegen möchten, müssen Sie im File 'rezgen.php' die Variablen $this->_imagePath und $this->_fontPath entsprechend anpassen.
 
-# Verwendung
+## Verwendung
 $rez = new rezgen();
 $rez->setRecipient('Fabienne Müller', 'Teststrasse 23a', '5013 Niedergösgen', 'Müller GmbH');
 $rez->setPayer('Markus Test', 'Beispielweg 8', '5012 Schönenwerd');
