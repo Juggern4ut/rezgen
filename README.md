@@ -11,7 +11,7 @@ Da die Klasse sehr simpel ist, geht auch die Installation schnell von statten.
 Erstellen Sie ein neues Objekt mit `new rezgen()` und führen Sie die Funktionen `setRecipient`, `setPayer`, `setAccount`, `setAmount` und optional `setPaymentReason` aus.
 Danach kann das Bild mit der Funktion `generate` erstellt werden.
 
-```
+```php
 $rez = new rezgen();
 $rez->setRecipient('Fabienne Müller', 'Teststrasse 23a', '5013 Niedergösgen', 'Müller GmbH');
 $rez->setPayer('Markus Test', 'Beispielweg 8', '5012 Schönenwerd');
