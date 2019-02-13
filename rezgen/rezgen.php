@@ -1,4 +1,8 @@
 <?php
+	/**
+	* Erstellt ein PNG eines roten Einzahlungsscheins nach Vorlage der Schweiz
+	* @author Lukas Meier
+	*/
 	class rezgen{
 		private $_imagePath;
 		private $_fontPath;
@@ -16,6 +20,14 @@
 			$this->_fontPath = dirname(__FILE__).'/res/font/excalib.ttf';
 		}
 
+		/**
+		* Definiert die Adresse des Empfängers
+		* @param String $name Vor- und Nachname des Empfängers
+		* @param String $street Strasse und Hausnummer des Empfängers
+		* @param String $location Postleitzahl und Ortschaft des Empfängers
+		* @param String $company Firmenname des Empfängers. Wird ignoriert falls false
+		* @return void
+		*/
 		public function setRecipient($name, $street, $location, $company=false){
 			$this->_recipient["name"] = $name;
 			$this->_recipient["company"] = $company;
@@ -23,21 +35,42 @@
 			$this->_recipient["location"] = $location;
 		}
 
+		/**
+		* Definiert die Adresse des Überweisers
+		* @param String $name Vor- und Nachname des Überweisers
+		* @param String $street Strasse und Hausnummer des Überweisers
+		* @param String $location Postleitzahl und Ortschaft des Überweisers
+		* @return void
+		*/
 		public function setPayer($name, $street, $location){
 			$this->_payer["name"] = $name;
 			$this->_payer["street"] = $street;
 			$this->_payer["location"] = $location;
 		}
 
+		/**
+		* Definiert die Kontonummer
+		* @param String $account Kontonummer
+		* @return void
+		*/
 		public function setAccount($account){
 			$this->_account = $account;
 		}
 
+		/**
+		* Definiert die Kosten auf dem Einzahlungsschein
+		* @param String|Float $amount Zu bezahlender Betrag
+		* @return void
+		*/
 		public function setAmount($amount){
-			//$this->_amount = number_format($amount, 2);
 			$this->_amount = str_split(strrev(number_format($amount, 2, '', '')));
 		}
 
+		/**
+		* Definiert den Zahlungszweck
+		* @param String $reason Der Zahlungszweck
+		* @return void
+		*/
 		public function setPaymentReason($reason){
 			$arrayWords = explode(' ', $reason);
 			$maxLineLength = 34;
@@ -60,6 +93,10 @@
 			$this->_paymentReason = $arrayOutput;
 		}
 
+		/**
+		* Generiert den Einzahlungsschein mit den definierten Daten und gibt diesen aus
+		* @return void
+		*/
 		public function generate(){
 			header("Content-Type: image/png");
 			$image = imagecreatefrompng($this->_imagePath);
