@@ -24,9 +24,7 @@ $rez->generate('/mein/pfad/einzahlungsschein.png');
 ### Ausgabe
 Der generierte Einzahlungsschein sieht wie folgt aus:
 
-<p align=center>
-    <img alt="Ein mit rezgen generierter roter Einzahlungsschein" src="https://i.imgur.com/fZIktRn.png">
-</p>
+<img alt="Ein mit rezgen generierter roter Einzahlungsschein" src="https://i.imgur.com/fZIktRn.png">
 
 ## Hinweise
 1. Die Klasse wird versuchen den Verwendungszweck (gesetzt in `setPaymentMethod`) so gut wie möglich umzubrechen, aber zu lange Texte werden trotzdem zu Überlappugnen führen. 
