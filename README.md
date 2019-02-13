@@ -9,7 +9,7 @@ Da die Klasse sehr simpel ist, geht auch die Installation schnell von statten.
 
 ## Verwendung
 Erstellen Sie ein neues Objekt mit `new rezgen()` und führen Sie die Funktionen `setRecipient`, `setPayer`, `setAccount`, `setAmount` und optional `setPaymentReason` aus.
-Danach kann das Bild mit der Funktion `generate` erstellt werden.
+Danach kann das Bild mit der Funktion `generate` erstellt und gespeichert werden.
 
 ```php
 $rez = new rezgen();
@@ -18,14 +18,14 @@ $rez->setPayer('Markus Test', 'Beispielweg 8', '5012 Schönenwerd');
 $rez->setAccount('25-9034-2');
 $rez->setAmount(199.95);
 $rez->setPaymentReason("Auftragsnummer 126342, hier ist der auf Ihrer Rechnung geforderte Betrag, wenn der Text noch viel viel länger wird, wird es erst richtig interessant");
-$rez->generate();
+$rez->generate('/mein/pfad/einzahlungsschein.png');
 ```
 
 ### Ausgabe
 Der generierte Einzahlungsschein sieht wie folgt aus:
 
 <p align=center>
-    <img style="border: 1px solid #000;" alt="Ein mit rezgen generierter roter Einzahlungsschein" src="https://i.imgur.com/fZIktRn.png">
+    <img alt="Ein mit rezgen generierter roter Einzahlungsschein" src="https://i.imgur.com/fZIktRn.png">
 </p>
 
 ## Hinweise
