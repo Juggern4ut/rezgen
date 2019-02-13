@@ -28,6 +28,6 @@ Der generierte Einzahlungsschein sieht wie folgt aus:
     <img style="border: 1px solid #000;" alt="Ein mit rezgen generierter roter Einzahlungsschein" src="https://i.imgur.com/fZIktRn.png">
 </p>
 
-### Hinweise
+## Hinweise
 1. Die Klasse wird versuchen den Verwendungszweck (gesetzt in `setPaymentMethod`) so gut wie möglich umzubrechen, aber zu lange Texte werden trotzdem zu Überlappugnen führen. 
 2. Beachten Sie bitte, dass die Klasse den Einzahlungsschein als Bild generiert und nicht als PDF, das bedeutet, dass der Text auf dem Einzahlungsschein **NICHT** markiert werden kann.
